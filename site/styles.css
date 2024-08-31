@@ -9,6 +9,9 @@ header {
     background-color: #f8f8f8;
     border-bottom: 1px solid #e0e0e0;
     padding: 10px 20px;
+    display: flex;
+    align-items: center; /* Выравнивание по вертикали */
+    justify-content: space-between; /* Размещение логотипа и меню */
 }
 
 nav ul {
@@ -16,7 +19,7 @@ nav ul {
     margin: 0;
     padding: 0;
     display: flex;
-    justify-content: space-around;
+    align-items: center; /* Вертикальное выравнивание */
 }
 
 nav a {
@@ -25,34 +28,51 @@ nav a {
     font-weight: bold;
 }
 
+.logo-item a {
+    display: block;
+}
+
+.logo-item img {
+    height: 40px; /* Установите высоту логотипа по вашему желанию */
+}
+
+nav li {
+    margin-left: 20px; /* Отступ между элементами меню */
+}
+
+nav li:first-child {
+    margin-left: 0; /* Удаляем отступ для первого элемента */
+}
+
 .hero {
-    background: url('design/18252b0fd676d528983aa2f2e8842d55.jpg') no-repeat center center/cover;
+    background: url('design/1473684794869604330.jpg') no-repeat center center/cover;
     color: white;
     text-align: center;
     padding: 100px 20px;
+    min-height: 400px;
 }
 
 .hero h1 {
     margin: 0;
-    font-size: 3em;
+    font-size: 5em;
 }
 
 .hero p {
-    font-size: 1.2em;
+    font-size: 2.5em;
 }
 
 button {
-    background-color: #007aff;
+    background-color: #f58b00;
     border: none;
     color: white;
     padding: 10px 20px;
-    font-size: 1em;
+    font-size: 1.5em;
     cursor: pointer;
     border-radius: 5px;
 }
 
 button:hover {
-    background-color: #005bb5;
+    background-color: #000000;
 }
 
 .features {
@@ -72,4 +92,10 @@ footer {
     color: white;
     text-align: center;
     padding: 10px 0;
+}
+.update-banner {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 50px 0;
 }
