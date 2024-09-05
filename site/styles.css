@@ -10,8 +10,8 @@ header {
     border-bottom: 1px solid #e0e0e0;
     padding: 10px 20px;
     display: flex;
-    align-items: center; /* Выравнивание по вертикали */
-    justify-content: space-between; /* Размещение логотипа и меню */
+    align-items: center;
+    justify-content: space-between;
 }
 
 nav ul {
@@ -19,7 +19,7 @@ nav ul {
     margin: 0;
     padding: 0;
     display: flex;
-    align-items: center; /* Вертикальное выравнивание */
+    align-items: center;
 }
 
 nav a {
@@ -33,15 +33,15 @@ nav a {
 }
 
 .logo-item img {
-    height: 40px; /* Установите высоту логотипа по вашему желанию */
+    height: 40px;
 }
 
 nav li {
-    margin-left: 20px; /* Отступ между элементами меню */
+    margin-left: 20px;
 }
 
 nav li:first-child {
-    margin-left: 0; /* Удаляем отступ для первого элемента */
+    margin-left: 0;
 }
 
 .hero {
