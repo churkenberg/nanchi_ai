@@ -14,14 +14,6 @@ header {
     justify-content: space-between;
 }
 
-nav ul {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    align-items: center;
-}
-
 nav a {
     text-decoration: none;
     color: #333;
@@ -42,14 +34,6 @@ nav a {
 
 .logo-item img {
     height: 40px;
-}
-
-nav li {
-    margin-left: 20px;
-}
-
-nav li:first-child {
-    margin-left: 0;
 }
 
 .hero {
@@ -132,3 +116,42 @@ footer {
 .product-item p {
     font-size: 1.2em;
 }
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+nav ul {
+    display: flex;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+nav ul li {
+    margin-right: 20px;
+}
+
+nav ul li:last-child {
+    margin-right: 0;
+}
+
+.navigation-tabs {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+nav li {
+    margin-left: 20px;
+  }
+  
+  nav li:first-child {
+    margin-left: 0;
+  }
