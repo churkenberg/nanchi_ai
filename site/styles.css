@@ -6,8 +6,8 @@ body {
 }
 
 header {
-    background-color: #f8f8f8;
-    border-bottom: 1px solid #e0e0e0;
+    background-color: #5c5c5c;
+    /*!border-bottom: 1px solid #e0e0e0;*/
     padding: 10px 20px;
     display: flex;
     align-items: center;
@@ -37,7 +37,8 @@ nav a {
 }
 
 .hero {
-    background: url('design/1473684794869604330.jpg') no-repeat center center/cover;
+    /*!background: url('design/1473684794869604330.jpg') no-repeat center center/cover;*/
+    background-color: #5c5c5c;
     color: white;
     text-align: center;
     padding: 100px 20px;
@@ -124,6 +125,7 @@ nav {
     padding: 1rem;
     background-color: #fff;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 10px 10px;
 }
 
 nav ul {
