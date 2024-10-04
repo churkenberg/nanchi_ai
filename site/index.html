@@ -28,7 +28,9 @@
         </nav>
         <div class="icons">
             <img src="search 1.png" alt="Search Icon" class="icon search-icon">
-            <img src="param_2 1.png" alt="Settings Icon" class="icon settings-icon">
+            <div class="burger" id="burger" role="button" aria-label="Menu">
+                <img src="param_2 1.png" alt="Menu" class="burger-icon">
+            </div>
         </div>
     </header>
     <div class="main-content">
@@ -57,5 +59,31 @@
         <br>
         created Churkenberg Ilya
     </footer>
+    <div class="menu" id="menu">
+        <h3>Select Theme</h3>
+        <button class="theme-button" onclick="setTheme('light')">Light</button>
+        <button class="theme-button" onclick="setTheme('dark')">Dark</button>
+        <button class="theme-button" onclick="setTheme('colorful')">Colorful</button>
+    </div>
+
+    <script>
+        // Функция для установки темы
+        function setTheme(theme) {
+            document.body.className = theme; // Устанавливает класс темы на body
+            closeMenu(); // Закрывает меню после выбора
+        }
+
+        // Открытие/закрытие бургер-меню
+        const burger = document.getElementById('burger');
+        const menu = document.getElementById('menu');
+
+        burger.onclick = function() {
+            menu.classList.toggle('show'); // Переключает видимость меню
+        };
+
+        function closeMenu() {
+            menu.classList.remove('show'); // Закрывает меню
+        }
+    </script>
 </body>
 </html>
