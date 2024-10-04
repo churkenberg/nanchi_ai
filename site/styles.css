@@ -1,154 +1,152 @@
 body {
-    font-family: 'Ubuntu', sans-serif;
     margin: 0;
     padding: 0;
-    color: #333;
+    background-color: black;
+    color: white;
+    font-family: 'Raleway', sans-serif;
+    text-align: center;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
 }
 
 header {
-    background-color: #5c5c5c;
-    /*!border-bottom: 1px solid #e0e0e0;*/
-    padding: 10px 20px;
     display: flex;
-    align-items: center;
     justify-content: space-between;
+    align-items: center;
+    padding: 20px 50px;
 }
 
-nav a {
-    text-decoration: none;
-    color: #333;
-    font-weight: bold;
-}
-
-.logo-item a {
+.logo-container {
     display: flex;
     align-items: center;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    flex-basis: 200px;
+}
+
+.logo-img {
+    width: 50px;
+    height: auto;
+    margin-right: 15px;
 }
 
 .logo-text {
-    margin-left: 15px;
-    font-size: 1.3em;
-    color: #333;
-    font-weight: bold;
+    font-family: 'Raleway', sans-serif;
+    font-size: 32px;
+    font-weight: 300;
 }
 
-.nav-text {
-    margin-left: 0px;
-    font-size: 1.1em;
-    color: #444444;
-    font-weight: bold;
+nav {
+    display: flex;
+    justify-content: center;
+    flex-grow: 1;
+    gap: 30px;
 }
 
-.logo-item img {
-    height: 40px;
-}
-
-.hero {
-    /*!background: url('design/1473684794869604330.jpg') no-repeat center center/cover;*/
-    background-color: #5c5c5c;
+header a {
     color: white;
-    text-align: center;
-    padding: 100px 20px;
-    min-height: 400px;
+    text-decoration: none;
+    font-weight: 300;
+    font-size: 18px;
 }
 
-.hero h1 {
-    margin: 0;
-    font-size: 5em;
+header a:hover {
+    text-decoration: underline;
 }
 
-.hero p {
-    font-size: 2.5em;
+.icons {
+    display: flex;
+    justify-content: flex-end; 
+    align-items: center;       
+    gap: 40px;                 
+    margin-right: 50px;   
+    flex-basis: 150px;
+    justify-content: flex-end;     
 }
 
-button {
-    background-color: #f58b00;
-    border: none;
-    color: white;
-    padding: 10px 20px;
-    font-size: 1.5em;
+.icon {
+    width: 24px;
+    height: 24px;
     cursor: pointer;
-    border-radius: 5px;
 }
 
-button:hover {
-    background-color: #000000;
+.main-content {
+    position: sticky; /* Фиксация основного текста */
+    top: 0; /* Положение от верхней части экрана */
+    background-color: black; /* Цвет фона для основного текста */
+    z-index: 10; /* Обеспечивает, что основной текст поверх остальных элементов */
+    padding: 200px 0; /* Отступы сверху и снизу */
+    margin-bottom: 500px; /* Отступ снизу, чтобы разделить с новостями */
 }
 
-.features {
-    display: flex;
-    justify-content: space-around;
-    padding: 20px;
-    background-color: #f4f4f4;
+.main-content h1 {
+    font-family: 'Raleway Dots', sans-serif;
+    font-size: 120px;
+    font-weight: 400;
+    letter-spacing: 2px;
+    margin-top: 10px;
 }
 
-.feature {
-    width: 30%;
-    text-align: center;
+.main-content h2 {
+    font-family: 'Raleway Dots', sans-serif;
+    font-size: 60px;
+    font-weight: 400;
+    margin-top: 10px;
 }
 
-footer {
-    background-color: #333;
+.divider {
+    border: none; /* Убираем стандартные стили границы */
+    height: 2px; /* Высота разделителя */
+    background-color: #444; /* Цвет разделителя */
+    margin: 20px 0; /* Отступ сверху и снизу */
+}
+
+.news {
+    background-color: #222; /* Темный фон для новостей */
     color: white;
-    text-align: center;
-    padding: 10px 0;
-}
-.update-banner {
-    background-color: #333;
-    color: white;
-    text-align: center;
-    padding: 50px 0;
-}
-
-.products {
-    display: flex;
-    justify-content: space-around;
     padding: 20px;
-    background-color: #f8f8f8;
+    margin: 20px auto;
+    max-width: 800px; /* Максимальная ширина раздела */
+    border-radius: 8px; /* Закругленные углы */
 }
 
-.product-item {
-    width: 45%;
-    text-align: center;
-    background-color: #fff;
-    padding: 20px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    margin-bottom: 20px;
+.news h3 {
+    font-family: 'Raleway', sans-serif;
+    font-size: 28px;
+    margin-bottom: 15px;
 }
 
-.product-item h2 {
-    font-size: 2em;
-    margin-bottom: 10px;
+.news-item {
+    margin-bottom: 15px;
+    border-bottom: 1px solid #444; /* Линия между новостями */
+    padding-bottom: 15px; /* Отступ снизу для новостей */
 }
 
-.product-item p {
-    font-size: 1.2em;
-}
-
-.navigation {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0.4rem;
-    background-color: #fff;
-    box-shadow: 0 3px 4px rgba(0, 0, 0, 0.1);
-    border-radius: 8px 8px;
-    width: 80%;
-    white-space: nowrap;
-    overflow: hidden;
-}
-
-nav ul {
-    display: flex;
-    list-style-type: none;
-    padding: 0;
+.news-item h4 {
+    font-family: 'Raleway Dots', sans-serif; /* Используем Raleway Dots для заголовков новостей */
+    font-size: 20px;
     margin: 0;
 }
 
-nav li {
-    margin-left: 20px;
+.news-item p {
+    font-family: 'Raleway', sans-serif;
+    font-size: 16px;
+    margin: 5px 0 0; /* Отступ для абзаца */
 }
-  
-nav li:first-child {
-    margin-left: 0;
+
+.footer {
+    background-color: white;
+    color: black;
+    padding: 30px 0;
+    text-align: center;
+    font-family: 'Raleway', sans-serif;
+    font-size: 18px;
+    width: 100%;
+    position: relative;
+    bottom: 0;
+    height: auto;
 }
