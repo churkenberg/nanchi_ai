@@ -10,16 +10,41 @@ body {
     flex-direction: column;
 }
 
+#neuronCanvas {
+    position: fixed; /* Заменяем на fixed, чтобы canvas растягивался на весь экран */
+    top: 0;
+    left: 0;
+    width: 100vw; /* Ширина 100% окна */
+    height: 100vh; /* Высота 100% окна */
+    z-index: -1; /* На фоне */
+}
+
+
+.trail {
+    position: absolute; /* Абсолютное позиционирование для точек */
+    width: 10px; /* Ширина точки */
+    height: 10px; /* Высота точки */
+    background-color: rgba(128, 128, 128, 0.5); /* Полупрозрачный серый цвет */
+    border-radius: 50%; /* Закругленные края для создания круга */
+    pointer-events: none; /* Отключение событий указателя для точек */
+    transition: transform 0.1s, opacity 0.5s; /* Плавные переходы для изменения позиции и непрозрачности */
+    opacity: 0; /* Начальная непрозрачность */
+}
+
 header {
     display: flex;
-    justify-content: space-between;
+    /*justify-content: space-between;*/
     align-items: center;
     padding: 20px 50px;
+    justify-content: center; /* Центрируем все содержимое хедера */
+    position: relative;
 }
 
 .logo-container {
     display: flex;
     align-items: center;
+    position: absolute; /* Фиксируем логотип слева */
+    left: 50px;
 }
 
 .logo {
@@ -43,7 +68,7 @@ header {
 nav {
     display: flex;
     justify-content: center;
-    flex-grow: 1;
+    /* flex-grow: 1; */
     gap: 30px;
 }
 
@@ -61,6 +86,8 @@ header a:hover {
 .icons {
     display: flex;
     align-items: center;
+    position: absolute; /* Фиксируем иконки */
+    right: 50px; /* Расположение справа */
 }
 
 .icon {
@@ -72,7 +99,7 @@ header a:hover {
 .main-content {
     position: sticky; /* Фиксация основного текста */
     top: 0; /* Положение от верхней части экрана */
-    background-color: black; /* Цвет фона для основного текста */
+    /*background-color: black;  Цвет фона для основного текста */
     z-index: 10; /* Обеспечивает, что основной текст поверх остальных элементов */
     padding: 200px 0; /* Отступы сверху и снизу */
     margin-bottom: 500px; /* Отступ снизу, чтобы разделить с новостями */
