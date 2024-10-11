@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nanchi AI</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway+Dots&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="icon" href="img/logo.png" type="image/x-icon">
+    <link rel="stylesheet" href="modelscss.css">
+</head>
+<body>
+    <canvas id="neuronCanvas"></canvas>
+    <header>
+        <div class="logo-container">
+            <a href="mainhtml.html" class="logo">
+                <img src="img/not_title_logo.png" alt="Nanchi Logo" class="logo-img">
+                <span class="logo-text">Nanchi</span>
+            </a>
+        </div>
+        <nav>
+            <a href="modelshtml.html">Models</a>
+            <a href="#">Training</a>
+            <a href="#">Community</a>
+            <a href="#">Documentation</a>
+            <a href="#">Events</a>
+            <a href="#">Study</a>
+            <a href="#">About us</a>
+        </nav>
+        <div class="icons">
+            <img src="img/search 1.png" alt="Search Icon" class="icon search-icon">
+            <div class="burger" id="burger" role="button" aria-label="Menu">
+                <img src="img/param_2 1.png" alt="Menu" class="burger-icon">
+            </div>
+        </div>
+    </header>
+    <div class="main-content">
+        <div>
+            <h1>Models</h1>
+            <h2>Free models for good deeds</h2>
+        </div>
+    </div>
+    
+    <hr class="divider">
+
+    <section id="models-section" class="models-section">
+        <h3>Our AI Models</h3>
+        <div id="models-container"></div> <!-- Контейнер для блоков моделей -->
+    </section>
+
+    <footer class="footer">
+        Nanchi-ai 2024
+        <br>
+    </footer>
+    <div class="menu" id="menu">
+        <h3>Select Theme</h3>
+        <button class="theme-button" onclick="setTheme('light')">Light</button>
+        <button class="theme-button" onclick="setTheme('dark')">Dark</button>
+        <button class="theme-button" onclick="setTheme('colorful')">Colorful</button>
+    </div>
+    <script src="modelsjs.js"></script>
+</body>
+</html>

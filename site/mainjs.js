@@ -36,7 +36,7 @@ const mouse = {
 };
 
 const neurons = [];
-const numNeurons = 90;
+const numNeurons = 70;
 
 class Neuron {
     constructor(x, y, radius) {

@@ -104,7 +104,7 @@ header a:hover {
     padding: 200px 0; /* Отступы сверху и снизу */
     margin-bottom: 500px; /* Отступ снизу, чтобы разделить с новостями */
     opacity: 0; /* Начальная непрозрачность */
-    animation: fadeIn 10s forwards; /* Применение анимации */
+    animation: fadeIn 7s forwards; /* Применение анимации */
 }
 
 @keyframes fadeIn {
