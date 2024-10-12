@@ -123,3 +123,26 @@ window.addEventListener('mousemove', (event) => {
 // Инициализация и запуск
 init();
 animate();
+
+// функция логина пользователя
+function toggleLoginForm() {
+    const loginForm = document.getElementById('loginForm');
+    loginForm.style.display = loginForm.style.display === 'block' ? 'none' : 'block';
+}
+
+async function login() {
+    const username = document.getElementById('username').value;
+    const password = document.getElementById('password').value;
+    const response = await fetch('/login', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ username, password })
+    });
+    if (response.ok) {
+        const data = await response.json();
+        alert('Login successful');
+        // Save the token and update UI accordingly
+    } else {
+        alert('Login failed');
+    }
+}

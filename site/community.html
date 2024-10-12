@@ -3,12 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nanchi AI</title>
+    <title>Training - Nanchi AI</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Raleway+Dots&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     <link rel="icon" href="img/logo.png" type="image/x-icon">
-    <link rel="stylesheet" href="css/maincss.css">
+    <link rel="stylesheet" href="css/community.css">
 </head>
 <body>
     <canvas id="neuronCanvas"></canvas>
@@ -22,7 +22,7 @@
         <nav>
             <a href="modelshtml.html">Models</a>
             <a href="research.html">Research</a>
-            <a href="community.html">Community</a>
+            <a href="community.html">• Community</a>
             <a href="#">Documentation</a>
             <a href="#">Events</a>
             <a href="#">Study</a>
@@ -43,24 +43,25 @@
     </header>
     <div class="main-content">
         <div>
-            <h1>Nanchi AI</h1>
-            <h2>Openness revolution</h2>
+            <h1>Community</h1>
+            <h2>Nanchi Team Community</h2>
         </div>
     </div>
     
     <hr class="divider">
 
-    <section class="news">
-        <h3>Recent News</h3>
-        <div class="news-item">
-            <h4>Event 1: Launch of New Model</h4>
-            <p>We are excited to announce the launch of our new AI model that promises to improve performance by 30%. Join us for the live demo on our website.</p>
+    <div class="post-feed">
+        <h2>Community Posts</h2>
+        <div id="posts-container" class="posts-container">
+            <!-- Posts will be dynamically inserted here -->
         </div>
-        <div class="news-item">
-            <h4>Event 2: Community Workshop</h4>
-            <p>Don't miss our upcoming workshop where community members will share insights and tips on leveraging Rosenblatt AI in real-world applications. Register now!</p>
+        <div class="new-post">
+            <input type="text" id="postTitle" placeholder="Title" class="new-post-title">
+            <textarea id="postContent" placeholder="Write your post..." class="new-post-content"></textarea>
+            <button onclick="addPost()" class="new-post-button">Post</button>
         </div>
-    </section>
+    </div>
+
     <footer class="footer">
         Nanchi-ai 2024
         <br>
@@ -71,6 +72,7 @@
         <button class="theme-button" onclick="setTheme('dark')">Dark</button>
         <button class="theme-button" onclick="setTheme('colorful')">Colorful</button>
     </div>
-    <script src="js/mainjs.js"></script>
+
+    <script src="js/community.js"></script>
 </body>
 </html>

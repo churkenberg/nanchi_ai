@@ -124,26 +124,61 @@ window.addEventListener('mousemove', (event) => {
 init();
 animate();
 
-// блок с моделями
+// функция логина пользователя
+function toggleLoginForm() {
+    const loginForm = document.getElementById('loginForm');
+    loginForm.style.display = loginForm.style.display === 'block' ? 'none' : 'block';
+}
 
-document.addEventListener("DOMContentLoaded", function() {
-    const models = [
-        { name: "Model 1", description: "High-performance model for classification" },
-        { name: "Model 2", description: "Efficient NLP model" },
-        { name: "Model 3", description: "Robust vision model" }
-    ];
-
-    const modelsContainer = document.getElementById("models-container");
-
-    models.forEach(model => {
-        const modelBlock = document.createElement("div");
-        modelBlock.classList.add("model-block");
-
-        modelBlock.innerHTML = `
-            <h4>${model.name}</h4>
-            <p>${model.description}</p>
-        `;
-
-        modelsContainer.appendChild(modelBlock);
+async function login() {
+    const username = document.getElementById('username').value;
+    const password = document.getElementById('password').value;
+    const response = await fetch('/login', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ username, password })
     });
-});
+    if (response.ok) {
+        const data = await response.json();
+        alert('Login successful');
+        // Save the token and update UI accordingly
+    } else {
+        alert('Login failed');
+    }
+}
+
+// лента постов
+function addPost() {
+    const title = document.getElementById('postTitle').value;
+    const content = document.getElementById('postContent').value;
+    if (!title || !content) {
+        alert('Please fill in both the title and content.');
+        return;
+    }
+
+    const postsContainer = document.getElementById('posts-container');
+    const postElement = document.createElement('div');
+    postElement.classList.add('post');
+
+    const postTitle = document.createElement('h3');
+    postTitle.classList.add('post-title');
+    postTitle.textContent = title;
+
+    const postContent = document.createElement('p');
+    postContent.classList.add('post-content');
+    postContent.textContent = content;
+
+    const postTimestamp = document.createElement('span');
+    postTimestamp.classList.add('post-timestamp');
+    postTimestamp.textContent = `Posted on ${new Date().toLocaleString()}`;
+
+    postElement.appendChild(postTitle);
+    postElement.appendChild(postContent);
+    postElement.appendChild(postTimestamp);
+
+    postsContainer.prepend(postElement);
+
+    // Clear input fields
+    document.getElementById('postTitle').value = '';
+    document.getElementById('postContent').value = '';
+}

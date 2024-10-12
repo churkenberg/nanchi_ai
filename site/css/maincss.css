@@ -212,6 +212,45 @@ header a:hover {
     margin: 5px 0 0; /* Отступ для абзаца */
 }
 
+.login-form {
+    display: none;
+    position: absolute;
+    top: 60px;
+    right: 50px;
+    background-color: #222;
+    padding: 20px;
+    border-radius: 8px;
+    z-index: 20;
+}
+.login-form input, .login-form button {
+    display: block;
+    width: 100%;
+    margin: 5px 0;
+}
+
+.login-form button {
+    background: linear-gradient(135deg, #000000, #ffffff); /* Gradient from blue to purple */
+    color: white;
+    border: none;
+    border-radius: 8px; /* Rounded edges */
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Soft shadow effect */
+    transition: transform 0.2s ease, box-shadow 0.2s ease; /* Smooth animation */
+}
+
+.login-form button:hover {
+    transform: scale(1.05); /* Slightly increase size on hover */
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3); /* Enhance shadow on hover */
+}
+
+.login-form button:active {
+    transform: scale(0.95); /* Slightly decrease size on click */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2); /* Reduce shadow on click */
+}
+
 .footer {
     background-color: white;
     color: black;
