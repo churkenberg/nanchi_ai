@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nanchi AI</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway+Dots&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="icon" href="img/logo.png" type="image/x-icon">
+    <link rel="stylesheet" href="css/maincss.css">
+</head>
+<body>
+    <canvas id="neuronCanvas"></canvas>
+    <header>
+        <div class="logo-container">
+            <a href="mainhtml.html" class="logo">
+                <img src="img/not_title_logo.png" alt="Nanchi Logo" class="logo-img">
+                <span class="logo-text">Nanchi</span>
+            </a>
+        </div>
+        <nav>
+            <a href="modelshtml.html">Models</a>
+            <a href="research.html">Research</a>
+            <a href="community.html">Community</a>
+            <a href="#">Documentation</a>
+            <a href="#">Events</a>
+            <a href="#">Study</a>
+            <a href="#">About us</a>
+        </nav>
+        <div class="icons">
+            <!--<img src="img/search 1.png" alt="Search Icon" class="icon search-icon">-->
+            <img src="img/user_icon.png" alt="User Icon" class="icon user-icon" onclick="toggleLoginForm()">
+            <div class="burger" id="burger" role="button" aria-label="Menu">
+                <img src="img/param_2 1.png" alt="Menu" class="burger-icon">
+            </div>
+        </div>
+        <div id="loginForm" class="login-form">
+            <input type="text" id="username" placeholder="Username">
+            <input type="password" id="password" placeholder="Password">
+            <button onclick="login()">Login</button>
+        </div>
+    </header>
+    <div class="main-content">
+        <div>
+            <h1>Nanchi AI</h1>
+            <h2>Openness revolution</h2>
+        </div>
+    </div>
+    
+    <hr class="divider">
+
+    <section class="news">
+        <h3>Recent News</h3>
+        <div class="news-item">
+            <h4>Event 1: Launch of New Model</h4>
+            <p>We are excited to announce the launch of our new AI model that promises to improve performance by 30%. Join us for the live demo on our website.</p>
+        </div>
+        <div class="news-item">
+            <h4>Event 2: Community Workshop</h4>
+            <p>Don't miss our upcoming workshop where community members will share insights and tips on leveraging Rosenblatt AI in real-world applications. Register now!</p>
+        </div>
+    </section>
+    <footer class="footer">
+        Nanchi-ai 2024
+        <br>
+    </footer>
+    <div class="menu" id="menu">
+        <h3>Select Theme</h3>
+        <button class="theme-button" onclick="setTheme('light')">Light</button>
+        <button class="theme-button" onclick="setTheme('dark')">Dark</button>
+        <button class="theme-button" onclick="setTheme('colorful')">Colorful</button>
+    </div>
+    <script src="js/mainjs.js"></script>
+</body>
+</html>
